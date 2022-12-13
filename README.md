@@ -8,7 +8,7 @@ App created to test the camera.
 
 </br>
 
-![preview](./.github/preview.jpeg) | ![preview](./.github/preview2.jpeg)
+![preview](./.github/preview.jpeg)
 
 
 </br>
