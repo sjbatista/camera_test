@@ -110,11 +110,15 @@ export default function App() {
 
       :
 
-      <View>
+      <View style={{width:'100%', height:'100%'}}>
 
-        <Image style={{width:300,height:300}} source={{uri:picture}} />
+        <Image style={{width:'100%',height:'90%'}} source={{uri:picture}}/>
+        
+        <View style={{width:'100%', height:'10%', flexDirection:'row'}}>
+        <TouchableOpacity style={styles.buttonDelete} onPress={()=>setPicture('')}><Text style={styles.textDelete}>DELETE</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.buttonShare} onPress={()=>setPicture('')}><Text style={styles.textDelete}>SHARE</Text></TouchableOpacity>
+        </View>  
 
-        <TouchableOpacity onPress={()=>setPicture('')}><Text>DELETE</Text></TouchableOpacity>
 
         </View>
 
@@ -133,45 +137,63 @@ export default function App() {
 const styles = StyleSheet.create({
 
   container: {
-
     flex: 1,
-
   },
 
   camera: {
-
     flex: 1,
-
   },
 
   buttonContainer: {
-
     flex: 1,
-
-    backgroundColor: 'transparent',
-
     flexDirection: 'row',
-
     margin: 20,
-
   },
 
   button: {
-
-    flex: 0.1,
-
+    flex: 0.3,
+    height: 35,
+    borderRadius:40,
+    borderColor:'white',
+    borderWidth:2,
     alignSelf: 'flex-end',
-
+    textAlign:'center',
     alignItems: 'center',
-
+    justifyContent:'center'
   },
 
   text: {
-
     fontSize: 18,
-
+    textAlign: 'center',
+    alignItems:'center',
     color: 'white',
+  },
 
+  buttonDelete: {
+    height: '100%',
+    width: '50%',
+    alignSelf: 'center',
+    textAlign:'center',
+    alignItems: 'center',
+    justifyContent:'center',
+    backgroundColor:'red'
+  },
+
+  buttonShare: {
+    height: '100%',
+    width: '50%',
+    alignSelf: 'center',
+    textAlign:'center',
+    alignItems: 'center',
+    justifyContent:'center',
+    backgroundColor:'green'
+  },
+
+  textDelete: {
+    fontSize: 18,
+    textAlign: 'center',
+    alignItems:'flex-end',
+    color: 'white',
   },
 
 });
